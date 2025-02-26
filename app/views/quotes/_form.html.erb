@@ -1,0 +1,11 @@
+ <%= form_for @quote do |form| %>
+  <div class="field-container">
+    <%= form.label :name, class: "label" %>
+    <%= form.text_field :name, placeholder: "Enter a quote", class: "input w-full" %>
+  </div>
+  <% @quote.errors.full_messages_for(:name).each do |message| %>
+    <p class="error-message"><%= message %></p>
+  <% end %>
+
+  <%= form.submit class:"button mt-4" %>
+<% end %>
