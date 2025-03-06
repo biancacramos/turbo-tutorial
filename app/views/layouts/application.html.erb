@@ -12,8 +12,16 @@
   </head>
 
   <body>
-    <main class= "flex w-screen h-screen p-6">
-      <%= yield %>
+    <main class= "flex flex-col w-screen h-screen">
+      <%= render "layouts/navbar" %>
+
+      <div id="flash" class="flashe">
+        <%= render "layouts/flash" %>
+      </div>
+
+      <div class="p-6">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>

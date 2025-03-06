@@ -1,8 +1,8 @@
 /* Application styles */
 
 .button {
-  border-radius: 8px;
-  padding: 8px 14px;
+  border-radius: 18px;
+  padding: 6px 18px;
   background-color: #0E8F62;
   color: white
 }
@@ -21,6 +21,14 @@
   flex-direction: column;
   width: 100%;
   gap: 6px
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  height: 80px
 }
 
 .input {
@@ -42,12 +50,31 @@
   padding: none;
 }
 
-.header {
+.navbar {
   display: flex;
+  flex-position: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding: 24px 36px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.quote {
+  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  height: 80px
+  border: 1px solid lightGray;
+  border-radius: 8px;
+
+}
+
+.quote__actions {
+  display: flex;
+  gap: 6px;
 }
 
 .subtitle {
@@ -60,4 +87,39 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1;
+}
+
+.flashe {
+  position:fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  max-width: 100%;
+  width: max-content;
+  padding: 0 20px;
+
+}
+
+.flashe__message {
+  font-size: 14px;
+  color: white;
+  padding: 10px 16px;
+  background-color: gray;
+  animation: appear-then-fade 4s both;
+  border-radius: 10px;
+}
+
+@keyframes appear-then-fade {
+  0%, 100% {
+    opacity:0
+  }
+  5%, 60% {
+    opacity:1
+  }
 }

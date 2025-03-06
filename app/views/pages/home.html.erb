@@ -1,0 +1,9 @@
+<main class="flex flex-col w-full h-full items-center justify-center gap-8">
+  <h1 class="title">Quote editor</h1>
+  <p>A blazing fast quote editor built with Hotwire</p>
+  <% if user_signed_in? %>
+    <%= link_to "View quotes", quotes_path, class: "button" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "button" %>
+  <% end %>
+</main>
